@@ -2,7 +2,7 @@ def check_first_last_name(name):
     name = (name.strip()).split()
     first_last = ""
 
-    if len(name):
+    if len(name) > 1:
         first = name[0]
         last = " ".join(name[-1:])
         if last == first or last == "":
