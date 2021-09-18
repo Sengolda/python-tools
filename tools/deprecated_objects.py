@@ -2,7 +2,7 @@ import functools
 from warnings import warn
 
 
-def deprecated(instead_use = None):
+def deprecated(instead_use=None):
     def actual_decorator(o):
         @functools.wraps(o)
         def decorated(*args, **kwargs):
@@ -13,6 +13,7 @@ def deprecated(instead_use = None):
                 message += "{0.__name__} is deprecated."
             warn(message.format(o, instead_use))
             return o(*args, **kwargs)
-        return decorated
-    return actual_decorator
 
+        return decorated
+
+    return actual_decorator

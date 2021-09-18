@@ -3,4 +3,3 @@ def find(predicate, seq):
         if predicate(element):
             return element
     return None
-
